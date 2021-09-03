@@ -1,0 +1,35 @@
+
+#ESTE PROGRAMA TE PREGUNTA LA CONTRASEÑA
+
+usuario = 'matias'
+contraseña = 'titan'
+intentousuario = 0
+intentocontraseña = 0
+
+
+print('ingrese usuario: ')
+usuarioingresado = input()
+
+while usuarioingresado != usuario:
+    print('vuelva a ingresar ususario')
+    usuarioingresado = input()
+    intentousuario = intentousuario + 1
+    if intentousuario == 5:
+        print('fallaste muchas veces')
+        break
+
+if usuario == usuarioingresado:
+    print('ingrese contraseña')
+    contraseñaingresada = input()
+    while contraseña != contraseñaingresada:
+        print('ingresó mal la contraseña, vuelva a intentarlo')
+        intentocontraseña = intentocontraseña + 1
+        contraseñaingresada = input()
+        if intentocontraseña == 5:
+            print('fallaste muchas veces')
+            break
+    if contraseña == contraseñaingresada:
+        print('acceso correcto')
+
+
+
